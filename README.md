@@ -62,9 +62,6 @@ Each student record contains the following properties:
 - *Submit* button currently navigates back to `MainMenuForm`
 - Form closes itself on submit (does not just hide)
 
-**Form3**
-- Empty placeholder form in the `PresentationLayer` namespace
-- No functionality implemented yet
 
 ---
 
