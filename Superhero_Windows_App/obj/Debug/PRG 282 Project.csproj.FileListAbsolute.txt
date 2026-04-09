@@ -1,0 +1,13 @@
+C:\Belgium campus\2nd year\PRG 282\project\Project\PRG 282 Project\PRG 282 Project\bin\Debug\PRG 282 Project.exe.config
+C:\Belgium campus\2nd year\PRG 282\project\Project\PRG 282 Project\PRG 282 Project\bin\Debug\PRG 282 Project.exe
+C:\Belgium campus\2nd year\PRG 282\project\Project\PRG 282 Project\PRG 282 Project\bin\Debug\PRG 282 Project.pdb
+C:\Belgium campus\2nd year\PRG 282\project\Project\PRG 282 Project\PRG 282 Project\obj\Debug\PRG 282 Project.csproj.AssemblyReference.cache
+C:\Belgium campus\2nd year\PRG 282\project\Project\PRG 282 Project\PRG 282 Project\obj\Debug\PRG_282_Project.MainMenuForm.resources
+C:\Belgium campus\2nd year\PRG 282\project\Project\PRG 282 Project\PRG 282 Project\obj\Debug\PRG_282_Project.Properties.Resources.resources
+C:\Belgium campus\2nd year\PRG 282\project\Project\PRG 282 Project\PRG 282 Project\obj\Debug\PRG 282 Project.csproj.GenerateResource.cache
+C:\Belgium campus\2nd year\PRG 282\project\Project\PRG 282 Project\PRG 282 Project\obj\Debug\PRG 282 Project.csproj.CoreCompileInputs.cache
+C:\Belgium campus\2nd year\PRG 282\project\Project\PRG 282 Project\PRG 282 Project\obj\Debug\PRG 282 Project.exe
+C:\Belgium campus\2nd year\PRG 282\project\Project\PRG 282 Project\PRG 282 Project\obj\Debug\PRG 282 Project.pdb
+C:\Belgium campus\2nd year\PRG 282\project\Project\PRG 282 Project\PRG 282 Project\obj\Debug\PRG 282 Project.exe.config
+C:\Belgium campus\2nd year\PRG 282\project\Project\PRG 282 Project\PRG 282 Project\obj\Debug\PRG_282_Project.NewStudentForm.resources
+C:\Belgium campus\2nd year\PRG 282\project\Project\PRG 282 Project\PRG 282 Project\obj\Debug\PRG_282_Project.PresentationLayer.Form3.resources
