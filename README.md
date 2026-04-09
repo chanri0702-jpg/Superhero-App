@@ -1,16 +1,83 @@
 # PRG2782
-The PRG282 project. The project folder contains the files for Visual Studio.
+A C# Windows Forms application for managing student records. Built on .NET Framework 4.7.2, the project follows a three-layer architecture separating presentation, business logic, and data concerns.
 
-Project Description: Your team plays a major role in the special HQ unit for Belgium Campuses’ sister campus, One Kick Heroes Academy. While the academy focuses on training aspiring heroes through hero courses with exams determining ranks and abilities to handle various threats - your team at HQ steps in to help manage and coordinate all the trainee records. Up until this point, assessors have struggled with paper-based documents during the entry exams, assessing students abilities and feeding the results into the old system. It has been chaotic, seeing that they can’t keep up with processing the reports. Build a C# app to track hero details, auto-calculate ranks based on exam scores, and generate reports. It's your unit's way to support the heroes-in-training, making sure they're prepped for everything from pop quizzes to finals week mayhem without any data disasters. Develop a C# Windows Forms application that manages superhero records using text files and incorporates Git version control. The application should include the following features:
+---
 
-1. Add New Superhero: Through a form interface, allow the user to input superhero details (At least a Hero ID, Name, Age, Superpower, and Hero Exam Score – more fields can be added to do in-app exam scores/assessments) and save these details to a file called superheroes.txt. Automatically determine and store the hero's rank and the threat level they can handle based on the exam score.
-2. View All Superheroes: Display all superhero records from superheroes.txt in a DataGridView, including calculated ranks and threat levels.
-3. Update Superhero Information: Enable the user to search for a superhero by ID, update their details through a form (including exam score), recalculate rank and threat level, and save changes.
-4. Delete a Superhero: Allow the user to select a superhero from the DataGridView and delete the corresponding record from the file.
-5. Generate a Summary Report: Calculate the total number of superheroes, the average age, average exam score, number of heroes per rank, and display the results on the form, saving this summary to a file named summary.txt.
-6. Version Control with Git: - Initialize a Git repository for the project. - Stage and commit changes after each major modification (add, update, delete, or report generation). - Push the repository to GitHub. The ranking system is for heroes in the One Kick Heroes Academy. The hero's rank is determined by their exam score as follows: S-Rank: 81-100 A-Rank: 61-80 B-Rank: 41-60 C-Rank: 0-40 Project 2025 Programming 2782 The threat level they can handle is: S-Rank: Finals Week (threat to the entire academy) A-Rank: Midterm Madness (threat to a department) B-Rank: Group Project Gone Wrong (threat to a study group) C-Rank: Pop Quiz (potential threat to an individual student) The requirements for the project are as follows:
-7. Create a C Windows Forms Application: - The application should be designed with an interface that allows users to interact with the Superhero Database System, including input fields and action buttons.
-8. Implement Core Functionalities: • Add New Superhero: - Use input fields (TextBox controls) for Hero ID, Name, Age, Superpower, and Hero Exam Score (numeric, 0-100). - Calculate rank and threat level based on the exam score. - Save new superhero details, including calculated rank and threat level, to a file called superheroes.txt. • View All Superheroes: - Display the list of superheroes in a DataGridView control on the form, showing Hero ID, Name, Age, Superpower, Exam Score, Rank, and Threat Level. - Load superhero data from superheroes.txt and populate the DataGridView. • Update Superhero Information: - Allow selection of a superhero record from the DataGridView, and populate the input fields for editing. - If exam score is updated, recalculate rank and threat level. - Save the updated information, including new rank and threat level if applicable, back to superheroes.txt. • Delete a Superhero: - Enable the user to delete a selected superhero from the DataGridView. - Remove the corresponding record from superheroes.txt. • Generate a Summary Report: - Calculate and display the total number of superheroes, average age, average exam score, and number of heroes per rank (S, A, B, C) on the form. - Save these details in a file called summary.txt.
-9. Implement Version Control Using Git: • Initialize a Git Repository: - In the project directory, initialize a Git repository. • Commit Changes: - After implementing each major feature (Add, Update, Delete, Generate Report), stage and Project 2025 Programming 2782 commit the changes. - Ensure clear, meaningful commit messages that describe each change.
-10. Integrate with GitHub: • Create a GitHub Repository: - Set up a new repository on GitHub and push your local commits to this remote repository. • Push Changes: - After completing each task, push all commits to the GitHub repository.
-11. Error Handling and Documentation: - Implement error handling for file I/O operations and input validation (including for exam score) to ensure a smooth user experience. - Include inline comments explaining key parts of the code for better readability and maintainability.
+## Features
+
+- **Main Menu** — Entry point with navigation to other forms
+- **Add New Student** — Form to capture student details including name, surname, age, superpower, and exam score
+- Layered project structure ready for expansion with database or file persistence
+
+---
+
+## Project Structure
+
+### Architecture
+
+The project is divided into three namespaces reflecting a layered design:
+
+| Namespace | Purpose |
+|---|---|
+| `PRG_282_Project` (root) | Application entry point and top-level forms |
+| `PRG_282_Project.PresentationLayer` | UI forms for user interaction |
+| `PRG_282_Project.BusinessLayer` | Business logic (currently a stub — `Logic.cs`) |
+| `PRG_282_Project.DataLayer` | Data models and data handling |
+
+### Source Files
+
+| File | Description |
+|---|---|
+| `Program.cs` | Application entry point; launches `MainMenuForm` |
+| `Form1.cs` / `Form1.Designer.cs` | `MainMenuForm` — main menu with a button to navigate to the new student form |
+| `Form2.cs` / `Form2.Designer.cs` | `NewStudentForm` — form with fields for Name, Surname, Superpower, Age, and Exam Score |
+| `Form3.cs` / `Form3.Designer.cs` | `Form3` — placeholder form in the `PresentationLayer` namespace |
+| `Student.cs` | `Student` entity class in the `DataLayer`; holds student fields and a hardcoded sample list |
+| `Datahandler.cs` | `Datahandler` class in the `DataLayer`; mirrors `Student` structure, intended for data access logic |
+| `Logic.cs` | Stub class in the `BusinessLayer`; placeholder for future business rules |
+
+### Student Data Fields
+
+Each student record contains the following properties:
+
+| Field | Type | Description |
+|---|---|---|
+| `ID` | `int` | Unique student identifier |
+| `Name` | `string` | First name |
+| `Surname` | `string` | Last name |
+| `Age` | `int` | Student age |
+| `Superpower` | `string` | Student's assigned superpower |
+| `Score` | `int` | Exam score |
+
+---
+
+## Forms Overview
+
+**MainMenuForm (`Form1`)**
+- Single button: *Add New Student*
+- Navigates to `NewStudentForm` and hides itself
+
+**NewStudentForm (`Form2`)**
+- Input fields for all student properties
+- *Submit* button currently navigates back to `MainMenuForm`
+- Form closes itself on submit (does not just hide)
+
+**Form3**
+- Empty placeholder form in the `PresentationLayer` namespace
+- No functionality implemented yet
+
+---
+
+## Requirements
+
+- .NET Framework 4.7.2
+- Visual Studio (any edition supporting Windows Forms and .NET Framework)
+
+---
+
+## Running the Application
+
+1. Open `PRG_282_Project.csproj` in Visual Studio.
+2. Build the solution (`Ctrl+Shift+B`).
+3. Run the application (`F5` or `Ctrl+F5`).
+4. The Main Menu will open — click *Add New Student* to navigate to the student entry form.
